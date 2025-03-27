@@ -7,6 +7,8 @@ const Home = () => {
     getProducts().then((data) => setProducts(data));
   }, []);
   return (
+    <>
+    <h1 className="text-3xl font-extrabold text-center py-6">E commerce <span className="text-orange-500">Store</span></h1>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
       {products.map((product) => (
         <div key={product.id} className="border p-4 ">
@@ -17,6 +19,7 @@ const Home = () => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 export default Home;
